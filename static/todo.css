@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212; /* dark background */
+  color: #f1f1f1;
+}
+
+/* Kanban board container */
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 85vh;
+  gap: 15px;
+}
+
+/* Common column styles */
+.column {
+  border-radius: 12px;
+  padding: 15px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: white;
+}
+
+/* Unique colors for each column */
+#backlog {
+  background-color: #d32f2f; /* red */
+}
+
+#ready {
+  background-color: #f57c00; /* orange */
+}
+
+#in-progress {
+  background-color: #fbc02d; /* yellow */
+  color: #222; /* darker text for contrast */
+}
+
+#done {
+  background-color: #388e3c; /* green */
+}
+
+/* Column titles */
+.column h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Task container inside each column */
+.task-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task card style */
+.task-card {
+  background-color: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 500;
+}
+
+/* Task input section at the bottom */
+.task-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  gap: 10px;
+  border-top: 1px solid #333;
+}
+
+/* Text input box */
+.task-input input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  width: 300px;
+}
+
+/* Add task button */
+.task-input button {
+  padding: 10px 16px;
+  background-color: #2979ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #1565c0;
+}
+
+.task {
+    position: relative;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    border: none;
+    background: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="static/todo.css">
+</head>
+<body>
+  <div class="kanban-board">
+    <div class="column" id="backlog">
+      <h2>Backlog</h2>
+      <div class="task-container">
+        <div class="task-card" draggable="true" id="task-1">Complete project plan</div>
+        <div class="task-card" draggable="true" id="task-2">Design UI layout</div>
+        <div class="task-card" draggable="true" id="task-3">Write Flask routes</div>
+      </div>
+    </div>
+
+    <div class="column" id="ready">
+      <h2>Ready to Start</h2>
+      <div class="task-container"></div>
+    </div>
+
+    <div class="column" id="in-progress">
+      <h2>In Progress</h2>
+      <div class="task-container"></div>
+    </div>
+
+    <div class="column" id="done">
+      <h2>Done</h2>
+      <div class="task-container"></div>
+    </div>
+  </div>
+
+  <div class="task-input">
+    <input type="text" id="taskText" placeholder="Enter a task..." />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <script src="static/todo.js"></script>
+</body>
+</html>
